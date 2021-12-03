@@ -81,13 +81,16 @@ sudo pacman -S python python-yaml python-jinja python-jsonschema
 * [OpenOCD AUR package](https://aur.archlinux.org/packages/openocd/)
 
 #### Mac
-First install [Homebrew](https://brew.sh/). Then you can run these commands in Terminal:
+First install [Homebrew](https://brew.sh/) and [macFUSE] (https://github.com/osxfuse/osxfuse/releases). Then you can run these commands in Terminal:
 ```bash
 brew install armmbed/formulae/arm-none-eabi-gcc
-brew install --cask osxfuse && brew install tup
 brew install openocd
 brew install git-lfs
 pip3 install PyYAML Jinja2 jsonschema
+git clone git://github.com/gittup/tup.git
+cd tup
+./bootstrap.sh (This will build a 'tup' binary which must be somewhere in your %PATH%, i.e. move to /usr/local/bin)
+
 ```
 
 #### Windows
